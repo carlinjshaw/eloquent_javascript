@@ -1,0 +1,63 @@
+<script>
+const width = 8;
+const height = 8;
+const space = " ";
+const hash = "#";
+const count = 1;
+
+const first = (count) => {
+    let line = ""
+    for (i=1; i<=width; i +=1) {
+        if (i%2 ==1) {
+            line+= space;
+        } else if (i%2 == 0) {
+            line+=hash
+        }
+    }
+    console.log(line)
+    newCount = count + 1
+    mainFunction(newCount)
+
+}
+
+const second = (count) => {
+    let line = ""
+    for (i=1; i<=width; i +=1) {
+        if (i%2 ==1) {
+            line+=hash
+        } else if (i%2 == 0) {
+            line+= space;
+        }
+    }
+    console.log(line)
+    newCount = count + 1
+    mainFunction(newCount)
+}
+
+const mainFunction = (count) => {
+        console.log(count)
+        
+
+        while (count< height) {
+        //     console.log(i)
+        if (count % 2 == 1) {
+            console.log("first function is called")
+            first(count)
+        }
+        if (count % 2 == 0) {
+            console.log("second function is called")
+            second(count)
+        }
+        }
+    }
+
+const stopFunction = () => {
+    console.log("chessboard is made")
+}
+
+mainFunction(count)
+
+
+
+
+</script>
