@@ -1,5 +1,5 @@
 <script>
-const width = 8;
+const width = 20;
 const height = 8;
 const space = " ";
 const hash = "#";
@@ -35,20 +35,16 @@ const second = (count) => {
 }
 
 const mainFunction = (count) => {
-        console.log(count)
-        
-
-        while (count< height) {
-        //     console.log(i)
-        if (count % 2 == 1) {
-            console.log("first function is called")
+    
+        if (count<= height && count % 2 == 1) {
+            // console.log("first function is called")
             first(count)
         }
-        if (count % 2 == 0) {
-            console.log("second function is called")
+        if (count<= height && count % 2 == 0) {
+            // console.log("second function is called")
             second(count)
         }
-        }
+        
     }
 
 const stopFunction = () => {
